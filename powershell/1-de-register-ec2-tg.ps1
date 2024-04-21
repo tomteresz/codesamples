@@ -1,6 +1,6 @@
 #REM v0.2
 #Register and deregister ec2 instance from load balancer target group
-# .ps1 -ec2id <instanceid> -command <register/deregister>
+# de-register-ec2-tg.ps1 -ec2id <instanceid> -command <register/deregister>
 
 #parameters-from-commandline #instanceid #command
 param(
@@ -22,7 +22,7 @@ Set-DefaultAWSRegion $region
 $port = "80"
 
 #tg arns
-$arn80 = "arn:aws:elasticloadbalancing:eu-central-1:651629222199:targetgroup/test123/f3f807963789f1e4"
+$arn80 = "arn:aws:elasticloadbalancing:eu-central-1:651629222667:targetgroup/test123/f3f807963789f1e4"
 
 #targetgroup-80
 $TargetGroupArn = $arn80
@@ -65,3 +65,4 @@ else {
     Write-Host ".\template.ps1 -ec2id <instanceid> -command register -- to register instance in tg"
     Write-Host ".\template.ps1 -ec2id <instanceid> -command deregister  -- to deregister instance in tg"
 }
+

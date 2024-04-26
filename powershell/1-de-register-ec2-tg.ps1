@@ -38,8 +38,8 @@ catch {
     Write-host -ForegroundColor Red "Incorrect or empty instanceid."
     Write-host ""  
     Write-host "USAGE:"
-    Write-Host ".\template.ps1 -ec2id <instanceid> -command register -- to register instance in tg"
-    Write-Host ".\template.ps1 -ec2id <instanceid> -command deregister  -- to deregister instance in tg"
+    Write-Host ".\de-register-ec2-tg.ps1 -ec2id <instanceid> -command register -- to register instance in tg"
+    Write-Host ".\de-register-ec2-tg.ps1 -ec2id <instanceid> -command deregister  -- to deregister instance in tg"
     break
 }
 
@@ -62,7 +62,7 @@ else {
     Write-Host -ForegroundColor Red "Incorrect command."
     Write-host ""
     Write-host "USAGE:"
-    Write-Host ".\template.ps1 -ec2id <instanceid> -command register -- to register instance in tg"
-    Write-Host ".\template.ps1 -ec2id <instanceid> -command deregister  -- to deregister instance in tg"
+    Write-Host ".\de-register-ec2-tg.ps1 -ec2id <instanceid> -command register -- to register instance in tg"
+    Write-Host ".\de-register-ec2-tg.ps1 -ec2id <instanceid> -command deregister  -- to deregister instance in tg"
 }
 
